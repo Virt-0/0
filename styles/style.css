@@ -1,0 +1,79 @@
+/* header */
+.header{
+  color: white;
+  text-align: center;
+  width: 40%;
+  height: 75px;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+/* body */
+body {
+  background: black;
+  color: white;
+}
+/*css thanh menu*/
+.menu {
+  position: fixed; /*vi tri co dinh*/
+  top: 0; /*dat vi tri menu len dinh*/
+  left: 0; /*dat vi tri menu qua trai*/
+  width: 250px; /*Chieu rong menu*/
+  height: 100%; /*Chieu cao menu full*/
+  background-image: url('../scr/background.jpg'); /*background*/
+  background-size: cover; /*full screen background*/
+  background-position: center;/*can background giua*/
+  background-repeat: no-repeat;  /*khong lap background*/
+  background-attachment: fixed; /*co dinh background*/
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translateX(-100%); /*an menu qua ben trai man hinh*/
+  transition: transform 0.3s ease;/*dieu chinh hieu ung*/
+  z-index: 1000; /*dam bao menu tren dinh man hinh */
+  overflow-y: auto; /*Cho phep cuon menu neu qua dai*/
+  border-right: 3px solid white;  /*vien phai cho menu*/
+  text-align: left; /*can text qua trai*/
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li { 
+  padding: 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff; /*color text*/
+}
+.menu.show {
+  transform: translateX(0); /*hien thi menu khi co class "show"*/
+}
+.bot{  
+  border-bottom: 2px solid white;
+} /*gach duoi phan tu trong menu*/
+@keyframes rainbow {
+  0% { color: #ff0000; } /* red */
+  20% { color: #ff9900; } /* orange */
+  40% { color: #ffff00; } /* yellow */
+  60% { color: #00ff00; } /* green */
+  80% { color: #0000ff; } /* blue */
+  100% { color: #9900ff; } /* purple */
+}
+/*xoa gach link*/
+a { 
+  text-decoration: none;
+  color: cyan; /*color cua link*/
+}
+/*hieu ung 7 mau chi khi di chuot vao*/
+a:hover {    animation: rainbow 3s infinite; /*thoi gian chay la 3s va lap lai vo tan*/
+}
+.rainbow{
+		animation: rainbow 2s infinite;
+}/*them hieu ung 7 mau cho phan tu co class rainbow*/
+footer{
+  text-align: center;
+  border-top: 2px solid #fff;
+  width:100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+}/*credit*/
