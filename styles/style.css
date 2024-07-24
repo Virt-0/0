@@ -100,16 +100,22 @@ footer {
 		 text-align: center;
 } /* css cat */
 
-.list2 {
+.list2{
 		text-align: left;
 		border: 2px solid white;
 		padding: 5px;
 }
+.list3{
+		border: 2px solid white;
+		padding: 5px;
+}
 
-ul {
-  list-style-type: none; /* Ẩn dấu đầu dòng mặc định */
+ul{
   padding: 0;
   margin: 0;
+}
+.hide{
+		list-style-type: none; /* Ẩn dấu đầu dòng mặc định */
 }
 .but{
 		position: fixed;
@@ -123,7 +129,14 @@ ul {
 		cursor: pointer;
 		transition: opacity 0.3s;
 }
-.hidden {
+.hidden{
     opacity: 0; /* Ẩn nút bằng cách điều chỉnh độ mờ */
     pointer-events: none; /* Không cho phép tương tác */
+}
+.border{
+		border: 2px solid white;
+}
+.right{
+		position: relative;
+		right: 0;
 }
