@@ -1,0 +1,145 @@
+/* header */
+.header {
+  color: white;
+  text-align: center;
+  width: 40%;
+  height: 75px;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+/* body */
+body {
+  background: black;
+  color: white;
+		 height: 2000px; /* Đảm bảo có đủ không gian để cuộn */
+}
+
+/* css thanh menu */
+.menu {
+  position: fixed; /* vị trí cố định */
+  top: 0; /* đặt vị trí menu lên đỉnh */
+  left: 0; /* đặt vị trí menu qua trái */
+  width: 250px; /* Chiều rộng menu */
+  height: 100%; /* Chiều cao menu full */
+  background-image: url('../assets/background.jpg'); /* background */
+  background-size: cover; /* full screen background */
+  background-position: center; /* căn background giữa */
+  background-repeat: no-repeat; /* không lặp background */
+  background-attachment: fixed; /* cố định background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translateX(-100%); /* ẩn menu qua bên trái màn hình */
+  transition: transform 0.3s ease; /* điều chỉnh hiệu ứng */
+  z-index: 1000; /* đảm bảo menu trên đỉnh màn hình */
+  overflow-y: auto; /* Cho phép cuộn menu nếu quá dài */
+  border-right: 3px solid white; /* viền phải cho menu */
+  text-align: left; /* căn text qua trái */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff; /* màu text */
+}
+
+.menu.show {
+  transform: translateX(0); /* hiển thị menu khi có class "show" */
+}
+
+.bot {
+  border-bottom: 2px solid white; /* gạch dưới phần tử trong menu */
+}
+
+@keyframes rainbow {
+  0% { color: #ff0000; } /* red */
+  20% { color: #ff9900; } /* orange */
+  40% { color: #ffff00; } /* yellow */
+  60% { color: #00ff00; } /* green */
+  80% { color: #0000ff; } /* blue */
+  100% { color: #9900ff; } /* purple */
+}
+
+/* xóa gạch link */
+a {
+  text-decoration: none;
+  color: cyan; /* màu của link */
+}
+
+a:hover {
+  animation: rainbow 3s infinite; /* thời gian chạy là 3s và lặp lại vô tận */
+}
+
+.rainbow {
+  animation: rainbow 2s infinite; /* thêm hiệu ứng 7 màu cho phần tử có class rainbow */
+}
+
+footer {
+  text-align: center;
+  border-top: 2px solid #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+} /* credit */
+
+.list{
+  border: 2px solid white;
+  border-radius: 10px;
+		 width: 100px;
+  padding: 10px;
+		 margin: 20px 0 20px 5px;
+		 text-align: center;
+} /* css cat */
+
+.list2{
+		text-align: left;
+		border: 2px solid white;
+		padding: 5px;
+}
+.list3{
+		border: 2px solid white;
+		padding: 5px;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+.hide{
+		list-style-type: none; /* Ẩn dấu đầu dòng mặc định */
+}
+.but{
+		position: fixed;
+		bottom: 80px;
+		right: 5px;
+		background: #000;
+		color: white;
+		border: 1px solid white;
+		font-size: 50px;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: opacity 0.3s;
+}
+.hidden{
+    opacity: 0; /* Ẩn nút bằng cách điều chỉnh độ mờ */
+    pointer-events: none; /* Không cho phép tương tác */
+}
+.border{
+		border: 2px solid white;
+}
+.right{
+		position: relative;
+		right: 0;
+}
+white{
+		background: white;
+}
