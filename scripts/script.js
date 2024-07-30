@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Phần mã menu
-  var menuToggle = document.getElementById("menuToggle");
-  var menu = document.getElementById("menu");
-
-  // Bắt sự kiện click vào hình ảnh để hiển thị/ẩn menu
-  menuToggle.addEventListener("click", function() {
-    menu.classList.toggle("show");
-  });
-
-  // Đóng menu khi click ra ngoài
-  document.addEventListener("click", function(event) {
-    var isClickInside = menu.contains(event.target) || menuToggle.contains(event.target);
-    if (!isClickInside) {
-      menu.classList.remove("show");
-    }
-  });
-
   // Phần mã nút ẩn khi cuộn trang
   var button = document.getElementById('hideButton');
 
