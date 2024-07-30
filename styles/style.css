@@ -1,11 +1,13 @@
 /* header */
 .header {
-  color: white;
-  text-align: center;
-  width: 40%;
+  text-align: left;
   height: 75px;
-  border: 3px solid white;
-  border-radius: 20px;
+  border-bottom: 3px solid white;
+		 align-items: center;
+		 justify-content: left;
+}
+ #logo{
+		 border: 0.1mm solid white;
 }
 
 /* body */
@@ -13,50 +15,6 @@ body {
   background: black;
   color: white;
 		 height: 2000px; /* Đảm bảo có đủ không gian để cuộn */
-}
-
-/* css thanh menu */
-.menu {
-  position: fixed; /* vị trí cố định */
-  top: 0; /* đặt vị trí menu lên đỉnh */
-  left: 0; /* đặt vị trí menu qua trái */
-  width: 250px; /* Chiều rộng menu */
-  height: 100%; /* Chiều cao menu full */
-  background-image: url('../assets/background.jpg'); /* background */
-  background-size: cover; /* full screen background */
-  background-position: center; /* căn background giữa */
-  background-repeat: no-repeat; /* không lặp background */
-  background-attachment: fixed; /* cố định background */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transform: translateX(-100%); /* ẩn menu qua bên trái màn hình */
-  transition: transform 0.3s ease; /* điều chỉnh hiệu ứng */
-  z-index: 1000; /* đảm bảo menu trên đỉnh màn hình */
-  overflow-y: auto; /* Cho phép cuộn menu nếu quá dài */
-  border-right: 3px solid white; /* viền phải cho menu */
-  text-align: left; /* căn text qua trái */
-}
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu ul li {
-  padding: 10px;
-}
-
-.menu ul li a {
-  text-decoration: none;
-  color: #fff; /* màu text */
-}
-
-.menu.show {
-  transform: translateX(0); /* hiển thị menu khi có class "show" */
-}
-
-.bot {
-  border-bottom: 2px solid white; /* gạch dưới phần tử trong menu */
 }
 
 @keyframes rainbow {
@@ -89,6 +47,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+		 background: #000
 } /* credit */
 
 .list{
@@ -125,7 +84,7 @@ ul{
 		color: white;
 		border: 1px solid white;
 		font-size: 50px;
-		border-radius: 5px;
+		border-radius: 100px;
 		cursor: pointer;
 		transition: opacity 0.3s;
 }
@@ -142,4 +101,75 @@ ul{
 }
 white{
 		background: white;
+}
+nav {
+  display: flex;
+  color: white; /* Đặt màu chữ của các phần tử con mặc định là trắng */
+  gap: 20px;
+  padding: 5px;
+  text-align: center;
+		 align-items: center;
+  justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+nav a {
+  color: white; /* Đặt màu chữ của liên kết là trắng */
+  text-decoration: none; /* Loại bỏ gạch chân */
+}
+/* Cấu trúc cửa hàng ứng dụng */
+.app-store {
+  padding: 20px;
+  background-color: #000; /* Nền đen cho phần cửa hàng ứng dụng */
+}
+
+.app-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.app-item {
+  background: #1e1e1e; /* Nền xám tối cho từng mục ứng dụng để tạo độ tương phản với nền đen */
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.8); /* Box-shadow tản từ trên xuống dưới */
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.app-item:hover {
+  transform: scale(1.05);
+}
+
+.app-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.app-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff; /* Màu chữ trắng để nổi bật trên nền xám tối */
+}
+
+.app-item p {
+  font-size: 0.9em;
+  color: #ccc; /* Màu chữ xám nhạt cho mô tả ứng dụng */
+}
+
+.app-item a button {
+  background-color: #007bff; /* Nền nút màu xanh dương */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.app-item a button:hover {
+  background-color: #0056b3; /* Nền nút màu xanh dương đậm khi di chuột qua */
 }
