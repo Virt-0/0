@@ -1,1 +1,291 @@
-.header{height:75px;border-bottom:3px solid white;text-align:left;align-items:center;justify-content:left}#logo{border:0.1mm solid white}body{background:black;color:white;height:2000px}@keyframes rainbow{0%{color:#ff0000}20%{color:#ff9900}40%{color:#ffff00}60%{color:#00ff00}80%{color:#0000ff}100%{color:#9900ff}}a{text-decoration:none;color:cyan}a:hover{animation:rainbow 3s infinite}.rainbow{animation:rainbow 2s infinite}footer{text-align:center;border-top:2px solid #fff;width:100%;position:fixed;bottom:0;left:0;background:#000}.list{border:2px solid white;border-radius:10px;width:100px;padding:10px;margin:20px 0 20px 5px;text-align:center}.list2{text-align:left;border:2px solid white;padding:5px}.list3{border:2px solid white;padding:5px}ul{padding:0;margin:0}.hide{list-style-type:none}.but{position:fixed;bottom:80px;right:5px;background:#000;color:white;border:1px solid white;font-size:50px;border-radius:100px;cursor:pointer;transition:opacity 0.3s}.hidden{opacity:0;pointer-events:none}.border{border:2px solid white}.right{position:relative;right:0}white{background:white}nav{display:flex;color:white;gap:20px;padding:5px;text-align:center;align-items:center;justify-content:center}nav a{color:white;text-decoration:none}.app-store{padding:20px;background-color:#000}.app-list{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}.app-item{background:#1e1e1e;border-radius:8px;box-shadow:0 8px 15px rgba(255,255,255,0.8);padding:10px;width:200px;text-align:center;transition:transform 0.3s ease}.app-item:hover{transform:scale(1.05)}.app-item img{max-width:100%;border-radius:8px}.app-item h3{font-size:1.2em;margin:10px 0;color:#fff}.app-item p{font-size:0.9em;color:#ccc}.app-item a button{background-color:#007bff;color:white;border:none;padding:10px 15px;border-radius:5px;cursor:pointer;font-size:1em;text-decoration:none}.app-item a button:hover{background-color:#0056b3}
+/* Header */
+.header {
+    text-align: left;
+    height: 75px;
+    border-bottom: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Logo */
+#logo {
+    border: .1mm solid #fff;
+}
+
+/* Body */
+body {
+    background: #000;
+    color: #fff;
+    height: 2000px;
+}
+
+/* Rainbow Animation */
+@keyframes rainbow {
+    0% { color: red; }
+    20% { color: #f90; }
+    40% { color: #ff0; }
+    60% { color: lime; }
+    80% { color: blue; }
+    100% { color: #90f; }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: cyan;
+}
+
+a:hover {
+    animation: rainbow 3s infinite;
+}
+
+/* Rainbow Text */
+.rainbow {
+    animation: rainbow 2s infinite;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    border-top: 2px solid #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #000;
+}
+
+/* Lists */
+.list {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    margin: 20px 0 20px 5px;
+    text-align: center;
+}
+
+.list2 {
+    text-align: left;
+    border: 2px solid #fff;
+    padding: 5px;
+}
+
+.list3 {
+    border: 2px solid #fff;
+    padding: 5px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+    list-style-type: none;
+}
+
+/* Scroll Button */
+.but {
+    position: fixed;
+    bottom: 80px;
+    right: 5px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Border Class */
+.border {
+    border: 2px solid #fff;
+}
+
+/* Right Position */
+.right {
+    position: relative;
+    right: 0;
+}
+
+/* White Background */
+white {
+    background: #fff;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    color: #fff;
+    gap: 20px;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.app-store {
+    padding: 20px;
+    background-color: #000;
+}
+
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.app-item {
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.app-item:hover {
+    transform: scale(1.05);
+}
+
+.app-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.app-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.app-item p {
+    font-size: .9em;
+    color: #ccc;
+}
+
+.app-item a button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.app-item a button:hover {
+    background-color: #0056b3;
+}
+
+/* Hamburger Menu */
+#hamburger {
+    position: absolute;
+    right: 5%;
+    font-size: 40px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Sidebar Menu */
+#menu {
+    color: white;
+    width: 200px;
+    height: 93%;
+    padding: 20px;
+    position: fixed;
+    background: #000;
+    top: 0px;
+    left: -350px; /* Menu được ẩn ra ngoài màn hình */
+    transition: left 0.3s ease;
+    border: 2px solid #fff;
+    z-index: 100;
+    display: flex; /* Sử dụng flex để dễ dàng sắp xếp các mục theo hàng dọc */
+    flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
+    align-items: flex-start; /* Căn các mục về bên trái */
+}
+
+/* Hiển thị menu khi lớp "visible" được thêm vào */
+#menu.visible {
+    display: flex; /* Đảm bảo menu vẫn là flex khi hiển thị */
+    left: 0; /* Di chuyển menu vào trong màn hình */
+}
+
+/* Menu Links */
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #fff; /* Đặt viền dưới cho các mục */
+    width: 100%; /* Đảm bảo các mục chiếm toàn bộ chiều rộng của menu */
+    text-align: left; /* Căn chữ về bên trái */
+    transition: background-color 0.3s;
+}
+
+#menu a:hover {
+    background-color: #333; /* Màu nền khi hover */
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative; /* Để phần tử con có thể được đặt theo đúng vị trí */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff; /* Đặt viền dưới giống như các mục khác trong menu */
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng của menu */
+    text-align: left; /* Căn chữ về bên trái */
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #333; /* Màu nền khi hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none; /* Ẩn danh sách thả xuống mặc định */
+    position: absolute; /* Để phần tử thả xuống có thể được đặt ở vị trí chính xác */
+    background-color: #000; /* Màu nền của danh sách thả xuống */
+    min-width: 160px; /* Chiều rộng tối thiểu của danh sách thả xuống */
+    z-index: 1; /* Đảm bảo danh sách thả xuống nằm trên các phần tử khác */
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block; /* Đảm bảo các mục chiếm toàn bộ chiều rộng */
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #333; /* Màu nền khi hover */
+}
+
+/* Hiển thị danh sách thả xuống khi hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
