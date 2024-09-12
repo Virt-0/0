@@ -4,32 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/style.css">
-  <link rel="icon" type="image/x-icon" href="../assets/logo.jpg">
-  <title>Vb Project</title>
+  <title>Download</title>
 </head>
 <body>
-  <!-- Thanh điều hướng chính -->
+  <!-- Header and Logo -->
   <nav class="header" id="header">
-    <a href="../index.html">
-      <img id="logo" src="../assets/logo.jpg" style="width: 60px; height: 60px;" alt="Logo">
-    </a>
+    <a href="../index.html"><img id="logo" src="../assets/logo.jpg" style="width: 60px; height: 60px;" alt="Logo"></a>
     <h1>Download</h1>
+    <button id="hamburger">☰</button>
+    <div id="menu">
+      <a href="../index.html">Home</a>
+      
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a class="dropbtn rainbow">Download</a>
+        <div class="dropdown-content">
+          <a href="lienfire.html">Lienfire</a>
+          <a href="minecraft.html">Minecraft</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <!-- Nút để trở lại phần trên -->
-  <a href="#header">
-    <button class="but" id="hideButton">&uarr;</button>
-  </a>
+  <!-- Button to scroll up -->
+  <a href="#header"><button class="but" id="hideButton">&uarr;</button></a>
 
-  <!-- Thanh điều hướng phụ -->
-  <nav class="secondary-nav">      
-    <p class="rainbow">Download-game</p>
-    <a href="./about.html" target="_self">About</a>
-    <!-- Bạn có thể thêm liên kết khác tại đây -->
+  <!-- Navigation Links -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <p class="rainbow">Download</p>							
   </nav>
 
-  <!-- Nội dung chính -->
-  <div class="content">
+  <!-- Content -->
+    <div class="content">
     <h2>Applications</h2>
     <section class="app-store">
       <div class="app-list">
@@ -49,12 +56,12 @@
       </div>
     </section>
   </div>
-  <!-- Phần credit -->
+  <!-- Footer -->
   <footer>
     <h5>made by @virt</h5>
   </footer>
 
-  <!-- Đường dẫn tới file JavaScript -->
+  <!-- JavaScript file -->
   <script src="../scripts/script.js"></script>
 </body>
 </html>
