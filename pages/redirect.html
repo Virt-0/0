@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        /* CSS cho giao diện chuyển hướng */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+        }
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting...</h1>
+        <p>Please wait while we redirect you to the game download page.</p>
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        // Hàm thực hiện chuyển hướng
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy giá trị của gameUrl từ query string
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameUrl = urlParams.get('gameUrl');
+
+            // Kiểm tra nếu gameUrl có tồn tại
+            if (gameUrl) {
+                // Thực hiện chuyển hướng sau 2 giây để người dùng thấy spinner
+                setTimeout(() => {
+                    window.location.href = gameUrl; // Chuyển hướng đến URL tải game
+                }, 2000);
+            } else {
+                // Nếu không có gameUrl, hiển thị thông báo lỗi
+                document.querySelector('h1').textContent = 'Error';
+                document.querySelector('p').textContent = 'No game URL provided. Please try again later.';
+                document.querySelector('.spinner').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
