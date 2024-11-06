@@ -1,0 +1,11 @@
+/* style.css */
+body {
+    background-color: black !important; /* Nền trắng cho trang */
+    color: #FFFFFF; /* Màu chữ đen */
+    font-family: Arial, sans-serif; /* Kiểu chữ */
+    line-height: 1.6; /* Khoảng cách dòng */
+    padding: 0; /* Bỏ padding mặc định */
+    margin: 0;
+    position: fixed;
+    top: 100px;
+}

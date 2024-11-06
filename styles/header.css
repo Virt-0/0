@@ -1,0 +1,38 @@
+#header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background: black;
+  color: white;
+  padding-left: 10px;
+  border-bottom:2px solid white ;
+  
+}
+#button{
+  text-decoration:none;color:white;
+}
+#button:active{
+    border-bottom: 2px solid white;
+}
+#nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center; /* Căn chỉnh nút theo chiều dọc */
+    top: 25px;
+    right: 10px;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+.nav-but {
+    font-size: 20px;
+    color: white;            
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* Xóa highlight khi nhấn */        
+}
+.nav-but:active{
+border-bottom: 2px solid white;
+}
