@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>LFMB</title>
+    <link rel="stylesheet" href="../styles/games.css">  <!-- CSS riêng cho game -->
+    <link rel="stylesheet" href="../styles/style.css">  <!-- CSS chính -->
+    <link rel="icon" href="../assets/fav.ico" type="image/x-icon">         
+</head>
+
+<body>
+    <main>
+        <div class="game-container">
+            <!-- Phần thông tin game -->
+            <div class="game-info">
+                <img src="../assets/lienfire-icon.jpg" alt="App Icon" class="game-icon">
+                <div class="game-title">Lien Fire Mobile</div>
+            </div>
+
+            <!-- Phần tải game -->
+            <div class="download-section">
+                <div class="version-selector">
+                    <label for="version-select">Select Version:</label>
+                    <select class="version-select" id="version-select" data-default="-">
+                        <option value="-">-</option>
+                        <option value="1.6" data-link="../pages/redirect.html?gameUrl=https://www.mediafire.com/file/yrqgwc2yysl5d86/lienfire_1.6.apk/file">1.6</option>
+                        <option value="1.5" data-link="../pages/redirect.html?gameUrl=https://www.mediafire.com/file/yuszwbxlhyos7mz/lienfire_1.5.apk/file">1.5</option>
+                        <option value="1.4" data-link="../pages/redirect.html?gameUrl=https://www.mediafire.com/file/q9je2zcisusqu6n/lienfire_1.4.apk/file">1.4</option>
+                  
+                    </select>
+                        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const selectElement = document.getElementById('version-select');
+            const defaultValue = selectElement.getAttribute('data-default');
+
+            // Kiểm tra nếu data-default là "-" và thiết lập giá trị mặc định
+            if (defaultValue === '-') {
+                selectElement.value = '-';
+            }
+        });
+                        </script>
+                    
+                </div>
+
+                <a href="#" id="download-link">
+                    <button class="download-btn">Download</button>
+                </a>
+            </div>
+
+            <!-- Mô tả game -->
+            <div class="game-description">
+                <p>Archive Type: <a style="color:#0081ff;text-decoration:none;" href="https://www.mediafire.com/" target="_blank">Mediafire</a></p>
+                <p> made by <a style="color:#ff1593" href="https://m.youtube.com/@LazyBucket123" target="_blank">@LazyBucket123</a></p>
+                <p>Sorry for the limited information. You can click on the red part above to learn more about the developer.</br></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-container">
+        <p>© 2024 virtural0. This work is protected by copyright law. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript liên kết -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy tất cả phần tử <select> trên trang
+            const versionSelects = document.querySelectorAll('.version-select');
+
+            versionSelects.forEach(select => {
+                const downloadLink = select.closest('.download-section').querySelector('#download-link');
+                
+                // Lấy giá trị data-default từ thẻ <select>
+                const defaultVersion = select.getAttribute('data-default');
+                const defaultOption = Array.from(select.options).find(option => option.value === defaultVersion);
+                
+                // Đặt liên kết tải xuống cho phiên bản mặc định
+                if (defaultOption) {
+                    downloadLink.href = defaultOption.getAttribute('data-link');
+                }
+
+                // Lắng nghe sự kiện khi người dùng thay đổi phiên bản
+                select.addEventListener('change', function() {
+                    const selectedOption = select.options[select.selectedIndex];
+                    const selectedLink = selectedOption.getAttribute('data-link');
+                    
+                    // Cập nhật liên kết tải xuống
+                    downloadLink.href = selectedLink;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
