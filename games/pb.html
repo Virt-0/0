@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>BP</title>
+    <link rel="stylesheet" href="../styles/games.css">  <!-- CSS riêng cho game -->
+    <link rel="stylesheet" href="../styles/style.css">  <!-- CSS chính -->
+    <link rel="icon" href="../assets/fav.ico" type="image/x-icon">         
+</head>
+
+<body>
+    <main>
+        <div class="game-container">
+            <!-- Phần thông tin game -->
+            <div class="game-info">
+                <img src="../assets/bp-icon.jpg" alt="App Icon" class="game-icon">
+                <div class="game-title">Bad Parenting</div>
+            </div>
+
+            <!-- Phần tải game -->
+            <div class="download-section">
+                <div class="version-selector">
+                    <label for="version-select">Select Version:</label>
+                    <select class="version-select" id="version-select" data-default="-">
+                        <option value="-">-</option>
+                        <option value="1.20.81" data-link="../pages/redirect.html?gameUrl=https://www.mediafire.com/file/77wdgsscot6wh8o/Bad_Parenting_1_Mr.Red_Face_v0.1[Use_ZArchiver_or_other_app_to_install].xapk/file">Mr.Red_Face_v0.1</option>
+                    </select>
+                        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const selectElement = document.getElementById('version-select');
+            const defaultValue = selectElement.getAttribute('data-default');
+
+            // Kiểm tra nếu data-default là "-" và thiết lập giá trị mặc định
+            if (defaultValue === '-') {
+                selectElement.value = '-'; // Đặt giá trị mặc định là "-"
+            }
+        });
+                        </script>
+                    
+                </div>
+
+                <a href="#" id="download-link">
+                    <button class="download-btn">Download</button>
+                </a>
+            </div>
+            <!-- Mô tả game -->
+            <div class="game-description">
+                <p>Archive Type: <a style="color:#0081ff;text-decoration:none;" href="https://www.mediafire.com/" target="_blank">Mediafire</a></p>
+                <p>&#10071; Use ZArchiver or something similar to install this file &#10071;</p>
+                <p> made by <a style="color:#ff1593" href="https://www.facebook.com/2oo2studio" target="_blank">@2002</a></p>
+                <p>Sorry for the limited information. You can click on the red part above to learn more about the developer.</br></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-container">
+        <p>© 2024 virtural0. This work is protected by copyright law. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript liên kết -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy tất cả phần tử <select> trên trang
+            const versionSelects = document.querySelectorAll('.version-select');
+
+            versionSelects.forEach(select => {
+                const downloadLink = select.closest('.download-section').querySelector('#download-link');
+                
+                // Lấy giá trị data-default từ thẻ <select>
+                const defaultVersion = select.getAttribute('data-default');
+                const defaultOption = Array.from(select.options).find(option => option.value === defaultVersion);
+                
+                // Đặt liên kết tải xuống cho phiên bản mặc định
+                if (defaultOption) {
+                    downloadLink.href = defaultOption.getAttribute('data-link');
+                }
+
+                // Lắng nghe sự kiện khi người dùng thay đổi phiên bản
+                select.addEventListener('change', function() {
+                    const selectedOption = select.options[select.selectedIndex];
+                    const selectedLink = selectedOption.getAttribute('data-link');
+                    
+                    // Cập nhật liên kết tải xuống
+                    downloadLink.href = selectedLink;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
