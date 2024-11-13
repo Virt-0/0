@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>BP</title>
+    <link rel="stylesheet" href="../styles/games.css">  <!-- CSS riêng cho game -->
+    <link rel="stylesheet" href="../styles/style.css">  <!-- CSS chính -->
+    <link rel="icon" href="../assets/fav.ico" type="image/x-icon">         
+</head>
+
+<body>
+    <main>
+        <div class="game-container">
+            <!-- Phần thông tin game -->
+            <div class="game-info">
+                <img src="../assets/tpw-icon.png" alt="App Icon" class="game-icon">
+                <div class="game-title">The Past Within</div>
+            </div>
+
+            <!-- Phần tải game -->
+            <div class="download-section">
+                <div class="version-selector">
+                    <label for="version-select">Select Version:</label>
+                    <select class="version-select" id="version-select" data-default="-">
+                        <option value="-">-</option>
+                        <option value="0.1" data-link="../pages/redirect.html?gameUrl=https://www.mediafire.com/file/c0uhdlvtq8x82fg/The_Past_Within_v7.8.03.apk/file">7.8.03</option>
+                    </select>
+                        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const selectElement = document.getElementById('version-select');
+            const defaultValue = selectElement.getAttribute('data-default');
+
+            // Kiểm tra nếu data-default là "-" và thiết lập giá trị mặc định
+            if (defaultValue === '-') {
+                selectElement.value = '-'; // Đặt giá trị mặc định là "-"
+            }
+        });
+                        </script>
+                    
+                </div>
+
+                <a href="#" id="download-link">
+                    <button class="download-btn">Download</button>
+                </a>
+            </div>
+            <!-- Mô tả game -->
+            <div class="game-description">
+                <p>Archive Type: <a style="color:#0081ff;text-decoration:none;" href="https://www.mediafire.com/" target="_blank">Mediafire</a></p>
+                <p> made by <a style="color:#ff0049" href="https://www.rustylake.com/" target="_blank">Rusty Lake</a></p>
+                <p>The Past Within is a 2022 adventure video game developed and published by Rusty Lake. It is a cooperative multiplayer game where two people must share clues to solve puzzles. It was initially released for Android, iOS, macOS, and Windows. A Nintendo Switch port was released in 2023.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-container">
+        <p>© 2024 virtural0. This work is protected by copyright law. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript liên kết -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy tất cả phần tử <select> trên trang
+            const versionSelects = document.querySelectorAll('.version-select');
+
+            versionSelects.forEach(select => {
+                const downloadLink = select.closest('.download-section').querySelector('#download-link');
+                
+                // Lấy giá trị data-default từ thẻ <select>
+                const defaultVersion = select.getAttribute('data-default');
+                const defaultOption = Array.from(select.options).find(option => option.value === defaultVersion);
+                
+                // Đặt liên kết tải xuống cho phiên bản mặc định
+                if (defaultOption) {
+                    downloadLink.href = defaultOption.getAttribute('data-link');
+                }
+
+                // Lắng nghe sự kiện khi người dùng thay đổi phiên bản
+                select.addEventListener('change', function() {
+                    const selectedOption = select.options[select.selectedIndex];
+                    const selectedLink = selectedOption.getAttribute('data-link');
+                    
+                    // Cập nhật liên kết tải xuống
+                    downloadLink.href = selectedLink;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
