@@ -1,9 +1,0 @@
-.vbut{
-  text-decoration:none;color:white;background:black;border:none;font-size: 25px;margin-top: 20px;margin-left:20vw;
-}
-.vbut:active{
-    border-bottom: 2px solid white;
-}
-#dlpage{
-   display: flex;
-}
