@@ -1,0 +1,34 @@
+{
+  "apps": [
+    {
+      "name": "Minecraft PE",
+      "description": "Minecraft is a popular sandbox video game developed by Mojang Studios. Players explore a blocky, procedurally generated 3D world, gathering resources, crafting tools, and building structures to survive and thrive. The game offers various modes, including Survival, where players must manage health and hunger, and Creative, where they have unlimited resources to build freely. Minecraft also features multiplayer options, allowing players to collaborate on projects or compete in mini-games. With its endless possibilities and modding community, Minecraft has become a global cultural phenomenon, enjoyed by players of all ages.",
+      "link": "https://drive.google.com",
+      "image": "../assets/mc-icon.webp"
+    },
+    {
+      "name": "Fortnite",
+      "description": "Fortnite is an online video game developed by Epic Games. It features three distinct game mode versions: Fortnite: Save the World, a cooperative shooter-survival game; Fortnite Battle Royale, a free-to-play battle royale game; and Fortnite Creative, where players create their own worlds and battle arenas. The game is known for its vibrant graphics, unique building mechanics, and massive popularity across all age groups.",
+      "link": "https://www.epicgames.com",
+      "image": "https://example.com/fortnite.jpg"
+    },
+    {
+      "name": "Roblox",
+      "description": "Roblox is an online platform and game creation system that allows users to design and play games created by other users. With a massive player base and millions of user-generated games, Roblox is a hub for creativity and social interaction, offering experiences ranging from role-playing games to simulations and obstacle courses.",
+      "link": "https://www.roblox.com",
+      "image": "https://example.com/roblox.jpg"
+    },
+    {
+      "name": "Among Us",
+      "description": "Among Us is a multiplayer party game developed by InnerSloth. Set in a spaceship, players take on one of two roles: Crewmates, who complete tasks to win, and Impostors, who sabotage and eliminate Crewmates without being detected. The game became a cultural phenomenon thanks to its emphasis on teamwork, strategy, and deception.",
+      "link": "https://www.innersloth.com/gameAmongUs.php",
+      "image": "https://example.com/among-us.jpg"
+    },
+    {
+      "name": "Genshin Impact",
+      "description": "Genshin Impact is an open-world action role-playing game developed by miHoYo. Set in the fantasy world of Teyvat, players explore the environment, complete quests, and engage in fast-paced combat using elemental powers. With its stunning graphics and engaging storylines, Genshin Impact has become a major success globally.",
+      "link": "https://genshin.mihoyo.com",
+      "image": "https://example.com/genshin-impact.jpg"
+    }
+  ]
+}
