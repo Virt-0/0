@@ -1,0 +1,34 @@
+#nav {
+   position: fixed; /* Cố định thanh điều hướng */
+   top: calc(5vh + 20px);          /* Đặt từ trên xuống 0 */
+   right: 0;        /* Đặt từ phải qua 0 */
+   width: 80px;     /* Chiều rộng cho thanh điều hướng */
+   height: 100vh;  /* Cắt 5vh từ chiều cao toàn màn hình */
+   display: flex;
+   flex-direction: column; /* Sắp xếp hình ảnh theo cột (nằm dọc) */
+   align-items: center;    /* Căn giữa hình ảnh theo chiều ngang */
+   padding: 10px 0;
+   border-left: solid 3px white;
+   -webkit-tap-highlight-color: transparent;
+   outline: none;
+   margin-bottom: 5vh;
+}
+#nav img {
+   width: 50px;
+   height: 50px;
+   margin: 10px 0;
+   cursor: pointer;
+   transition: transform 0.3s ease, filter 0.3s ease; /* Thêm hiệu ứng sáng */
+   filter: brightness(0.5); /* Hình ảnh mờ mặc định */
+}
+
+#nav img.active {
+   transform: scale(1.2); /* Phóng to nếu đang ở trang đó */
+   filter: brightness(1); /* Làm sáng hình ảnh */
+   border-bottom: solid 3px white;
+   padding: 10px;
+   
+}
+#nav img:hover {
+   transform: scale(1.5); /* Phóng to hình ảnh khi hover */
+}

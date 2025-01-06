@@ -1,0 +1,14 @@
+#header{
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 5vh;
+   border-bottom: solid 3px white;
+   color: white;
+   margin: 0;
+   padding: 10px;
+   align-items: center;
+   justify-content: space-between;
+}
