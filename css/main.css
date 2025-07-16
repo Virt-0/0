@@ -1,0 +1,54 @@
+/*dark mode*/
+:root{
+--bg: #202020;
+--nav-bg: #181818;
+--fg: #ffffff;
+--accent: #90e0ff;
+--shadow: rgba(0, 0, 0, 0.5);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Montserrat',sans-serif;
+}
+
+nav {
+    display: flex;
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid #6b6b6b;
+    height: 10vh;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+button{
+    all: unset;
+    cursor: pointer;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#buttons #theme-toggle{
+    color: var(--fg);
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+}
+
+#buttons #theme-toggle:hover {
+    background-color: var(--fg);
+    color: var(--bg);
+}
