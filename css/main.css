@@ -1,10 +1,10 @@
 /*dark mode*/
 :root{
---bg: #505050;      /* background-color */
---hd-bg: #000000;       /* header-background */
+--bg: #FFF5ED;      /* background-color */
+--hd-bg: #191919;       /* header-background */
+--fg: #191919;      /* foreground */
+--hd-fg: #FFF5ED;
 --border: #ffffff;
---fg: #f0f0f0;      /* foreground */
-
 }
 
 /* setup */
@@ -22,7 +22,7 @@ a {
     all: unset;     /* remove link css */
 }
 
-/* top-bar: header + nav */
+/* top-bar: header + ... */
 
 #top {
     position: absolute;
@@ -30,14 +30,16 @@ a {
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 60%;
-    background: linear-gradient(to bottom, var(--hd-bg) , var(--bg));
+    height: 10vh;
+    background-color: var(--hd-bg);
+    /* background: linear-gradient(to bottom, var(--hd-bg) , var(--bg)); */
 }
 
 header {
     display: flex;
     height: 10vh;
     padding: 0 1rem 1rem 1rem;
+    color: var(--hd-fg);
     justify-content: space-between;
     align-items: center;
 }
@@ -49,38 +51,26 @@ header #brand {
     gap: 1rem;
 }
 
-nav {
-    display: flex;
-    height: 5vh;
-    border-bottom: 2px solid var(--border);
-    font-size: 1.5rem;
-    margin: 0 4rem;
-    padding: 0 1rem;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+#breadcrumb {
+    cursor: pointer;
 }
 
-nav #nav-links {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
+#breadcrumb a {
+    color: #414141;
+    padding-bottom: 0.2rem;
 }
 
-nav #nav-links li a{
-    font-size: medium;
+#breadcrumb a:hover {
+    color: black;
+    border-bottom: 0.1rem solid black;
 }
 
 /* content */
 
 #main-content {
     position: relative;
-    z-index: 7;
-    margin: 5vh 2vh 0 2vh;
+    z-index: 2;
+    margin: 3vh 2vh 0 2vh;
     max-width: 750px;
     line-height: 1.5;
 }
